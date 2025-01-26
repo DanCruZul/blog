@@ -2,25 +2,24 @@ import React from 'react';
 
 const BlogHeader: React.FC = () => {
   return (
-    <header className="flex w-full gap-2 text-[rgba(28,27,29,1)] justify-center flex-wrap py-10 max-md:max-w-full">
-      <div className="bg-[rgba(248,241,246,1)] flex min-w-60 items-stretch justify-center w-[876px] p-14 rounded-3xl max-md:max-w-full max-md:px-5">
-        <div className="flex min-w-60 w-full flex-col items-stretch justify-center flex-1 shrink basis-[0%] py-[97px] max-md:max-w-full">
-          <h1 className="text-[92px] font-medium leading-[96px] max-md:max-w-full max-md:text-[40px] max-md:leading-[46px]">
-            Material Design
-            <br />
-            Blog
-          </h1>
-          <p className="text-[21px] font-normal leading-none mt-4 max-md:max-w-full">
-            Read the latest and greatest about Material Design
-          </p>
-        </div>
+    <header className="flex w-full min-h-[400px] bg-gradient-to-r from-[#F8F1F6] to-[#E1F6F4] rounded-3xl overflow-hidden my-8 mx-auto max-w-7xl px-8">
+      <div className="flex flex-col justify-center w-full md:w-1/2 py-12 md:py-20">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium text-[#1C1B1D] leading-tight mb-4">
+          Material Design
+          <br />
+          Blog
+        </h1>
+        <p className="text-lg md:text-xl text-[#1C1B1D]/80">
+          Read the latest and greatest about Material Design
+        </p>
       </div>
-      <img
-        loading="lazy"
-        srcSet="https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true&width=100 100w, https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true&width=200 200w, https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true&width=400 400w, https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true&width=800 800w, https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/122e97734cb546b28d41af0f93ece26a/cb566f8d2895816224cf9672189c1cf67b4e53f74304829306e7584a659c1729?placeholderIfAbsent=true"
-        className="aspect-[1.61] object-contain w-[876px] min-w-60 rounded-3xl max-md:max-w-full"
-        alt="Material Design Blog"
-      />
+      <div className="hidden md:block w-1/2 relative">
+        <img
+          src="/lovable-uploads/cc2f694a-49b8-454f-b15c-e91362e51c15.png"
+          alt="Material Design Blog Header"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </div>
     </header>
   );
 };
