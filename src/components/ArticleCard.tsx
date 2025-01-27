@@ -20,34 +20,36 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   <div
     className={`flex ${
       className || "flex-col"
-    } overflow-hidden justify-center items-center rounded-3xl bg-zinc-100 min-w-[240px] w-[486px] ${
-      className?.includes("w-full") ? "" : "max-w-[486px]"
+    } overflow-hidden justify-center items-stretch rounded-3xl bg-zinc-100 min-w-[240px] w-full ${
+      className?.includes("md:w-full") ? "md:w-full" : "md:w-[calc(50%-12px)]"
     }`}
   >
     <div
-      className={`flex flex-col ${
-        className?.includes("flex-row") ? "w-1/2" : "w-full"
-      }`}
+      className={`${
+        className?.includes("flex-row") ? "md:w-1/2 w-full" : "w-full"
+      } h-[300px]`}
     >
       <img
         loading="lazy"
         src={imageUrl}
         alt={imageAlt}
-        className="object-contain w-full rounded-3xl aspect-[1.63] min-w-[200px]"
+        className="object-cover w-full h-full rounded-t-3xl"
       />
     </div>
     <div
-      className={`flex flex-col items-start p-6 ${
-        className?.includes("flex-row") ? "w-1/2" : "w-full"
-      } text-zinc-900 max-md:px-5`}
+      className={`flex flex-col ${
+        className?.includes("flex-row")
+          ? "md:w-1/2 md:justify-center w-full"
+          : "w-full justify-between"
+      }`}
     >
-      <div className="text-sm leading-none tracking-wide text-zinc-500">
-        {date}
+      <div className="flex flex-col gap-4 p-8 max-md:px-5">
+        <div className="text-sm font-normal text-zinc-500">{date}</div>
+        <div className="text-2xl font-medium leading-tight text-zinc-900">
+          {title}
+        </div>
+        <div className="text-base text-zinc-500">{description}</div>
       </div>
-      <div className="pr-10 mt-4 text-2xl font-medium leading-snug max-md:pr-5">
-        {title}
-      </div>
-      <div className="mt-2 text-base leading-loose">{description}</div>
     </div>
   </div>
 );
