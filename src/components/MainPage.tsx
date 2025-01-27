@@ -1,7 +1,7 @@
 import * as React from "react";
-import HeroSection from "@/components/HeroSection";
-import MainContent from "@/components/MainContent";
-import Sidebar from "@/components/Sidebar";
+import HeroSection from "./components/HeroSection";
+import MainContent from "./components/MainContent";
+import Sidebar from "./components/Sidebar";
 
 const MainPage: React.FC = () => (
   <div className="flex flex-col bg-white">
